@@ -5,16 +5,22 @@ import './Nav.css';
 
 import ShoppingCart from 'react-icons/lib/fa/shopping-cart';
 
+import {Link} from "react-router-dom";
+
 function Nav( { items } ) {
   return (
     <div id="Nav__container">
       <div id="Nav__linksContainer">
+      <Link className="navLink" to="/">
         <span className="Nav__label">Store</span>
+        </Link>
 
+        <Link className="NavLink" to="/checkout">
         <div id="Nav__checkoutContainer">
           <div id="Nav__itemsInCart"> { items } </div>
           <ShoppingCart id="Nav__shoppingCart" />
         </div>
+        </Link>
       </div>
     </div>
   )
